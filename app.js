@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 1760);
+app.set('port', process.env.PORT);
 app.use(express.static('public'));
 
 // The homepage route 
