@@ -1,0 +1,18 @@
+<div class="container">
+    <legend>Enter New Illness</legend>
+    <div class="form-group">
+        <label for="illness_name">Illness Name: </label>
+        <input type="text" name="illness_name" id="illness_name" value='{{illness_name}}'>
+    </div>
+    <div class="form-group">
+        <label for="discomfort">Discomfort Level: </label>
+        <input type="number" name="discomfort" id="discomfort" value="{{discomfort}}">
+    </div>
+    <div class="form-group">
+        <label for="symptom_length">Symptom Length: </label>
+        <input type="number" name="symptom_length" id="symptom_length" value="{{symptom_length}}">
+    </div>
+    <input id="id" type="hidden" name="Change"  value="{{id}}">
+    <a href="/illness"><input type="submit" id="illnessChange"></input></a>
+
+</div>

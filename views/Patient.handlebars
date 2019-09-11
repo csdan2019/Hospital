@@ -1,0 +1,179 @@
+<div class="container">
+  <form id= "patientForm" class="needs-validation mb-2" novalidate method = "post" action="createPatient">
+    <legend>New Patient Form</legend>
+    <div class="form-row">
+      <div class="col-md-2 mb-3">
+        <label for="validationCustom01">First name</label>
+        <input type="text" class="form-control" id="validationCustom01" name="first_name" placeholder="First name"  required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-2 mb-3">
+        <label for="validationCustom02">Last name</label>
+        <input type="text" class="form-control" id="validationCustom02" name ="last_name" placeholder="Last name"  required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-2 mb-3">
+        <label for="validationCustomUsername">Date of Birth</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend"></span>
+          </div>
+          <input type="date" class="form-control" id="validationCustomUsername" name="birthday" placeholder="Date of Birth" aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            Please enter Date of Birth.
+          </div>
+        </div>
+      </div>
+        <div class="col-md-2 mb-3">
+        <label for="validationCustom05">Gender</label>
+        <input type="text" class="form-control" id="validationCustom05" name ="gender" placeholder="Gender" required>
+        <div class="invalid-feedback">
+          Please provide Gender.
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-2 mb-3">
+        <label for="validationCustom03">Occupation</label>
+        <input type="text" class="form-control" id="validationCustom03" name ="occupation" placeholder="Occupation" required>
+        <div class="invalid-feedback">
+          Please provide Occupation.
+        </div>
+      </div>
+      <div class="col-md-2 mb-3">
+        <label for="validationCustom04">Weight</label>
+        <input type="number" class="form-control" id="validationCustom04" name= "weight" placeholder="Weight" required>
+        <div class="invalid-feedback">
+          Please provide Weight.
+        </div>
+      </div>
+      <div class="col-md-2 mb-3">
+        <label for="validationCustom05">Height (inches)</label>
+        <input type="number" class="form-control" id="validationCustom05" name="height" placeholder="Height" required>
+        <div class="invalid-feedback">
+          Please provide Height.
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-2 mb-3">
+        <label>Primary Care Physician</label>
+                <select id="select_doctor" form= "patientForm" name="doctor_id">
+
+
+
+</select>
+<!--         <label for="validationCustom05">Primary Care Physician </label>
+        <input type="text" class="form-control" id="validationCustom05" name="doctor_id" placeholder="Doctor" required>
+        <div class="invalid-feedback">
+          Please provide Phsician Name.
+        </div> -->
+      </div>
+      <div class="col-md-2 mb-3">
+        <label >Hospital Location </label>
+        <select id="select_department" form= "patientForm" name="hospital_location">
+
+
+
+</select>
+          
+<!--           <input type="text" class="form-control" id="validationCustom05" name="hospital_location" placeholder="hospital_location" required>
+          <div class="invalid-feedback">
+            Please provide Hospital Location.
+          </div> -->
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-row">
+        <legend class="col-form-label col-sm-2 pt-0">Smoker?</legend>
+        <div class="col-sm-2">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="smokerRadios" id="smoker-yes" value="1">
+            <label class="form-check-label" for="smoker-yes">
+              Yes 
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="smokerRadios" id="smoker-no" value="0" checked>
+            <label class="form-check-label" for="smoker-no">
+              No 
+            </label>
+          </div>
+        </div>
+        <legend class="col-form-label col-sm-2 pt-0">Alcohol?</legend>
+        <div class="col-sm-2">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="alcoholRadios" id="alcohol-yes" value="1">
+            <label class="form-check-label" for="alcohol-yes">
+              Yes 
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="alcoholRadios" id="alcohol-no" value="0" checked>
+            <label class="form-check-label" for="alcohol-no">
+              No 
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="mr-5 form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Birthday</th>
+        <th scope="col">Occupation</th>
+        <th scope="col">Smoker?</th>
+        <th scope="col">Alcohol?</th>
+        <th scope="col">Height</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Doctor</th>
+        <th scope="col">Hospital Location</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody id="patient-table">
+    </tbody> 
+  </table>
+</div>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+

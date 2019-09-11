@@ -1,0 +1,32 @@
+
+<div class="container">
+    <legend>Enter Doctor</legend>
+    <div class="form-group">
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name" id="first_name" value='{{first_name}}'>
+    </div>
+    <div class="form-group">
+        <label for="last_name">Last name: </label>
+        <input type="text" name="last_name" id="last_name" value="{{last_name}}">
+    </div>
+    <div class="form-group">
+        <label for="position_title">Position Title: </label>
+        <input type="text" name="position_title" id="position_title" value="{{position_title}}">
+    </div>
+
+            <label>Hospital Location:</label>
+        <select id="select_patDept" form="doctorChange" class="hospital_location" name="hospital_location">
+    
+          </select>
+ <!--    <div class="form-group">
+        <label for="hospital_location">Hospital Location: </label>
+        <input type="text" name="hospital_location" id="hospital_location" value="{{hospital_location}}">
+    </div> -->
+    <div class="form-group">
+        <label for="Rating">Rating: </label>
+        <input type="text" name="Rating" id="Rating" value="{{Rating}}">
+    </div>
+    <input id="id" type="hidden" name="Change"  value="{{id}}">
+    <a href="/doctor"><input type="submit" id="doctorChange"></input></a>
+    
+</div>

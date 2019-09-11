@@ -1,0 +1,31 @@
+<div class="container">
+  <form class="mb-2" action="createIllness" method="POST">
+    <legend>Enter New Illness</legend>
+    <div class="form-group">
+        <label for="illness_name">Illness Name: </label>
+        <input type="text" name="illness_name">
+    </div>
+    <div class="form-group">
+        <label for="discomfort">Discomfort Level: </label>
+        <input type="number" name="discomfort">
+    </div>
+    <div class="form-group">
+        <label for="symptom_length">Symptom Length: </label>
+        <input type="number" name="symptom_length">
+    </div>
+    <input type="submit" value="Submit review">
+  </form>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Illness</th>
+        <th scope="col">Discomfort Level</th>
+        <th scope="col">Symptom Length</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody id="illness-table">
+    </tbody> 
+  </table>
+</div>
